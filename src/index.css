@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'AstroSpace';
+    src: url(./assets/font/AstroSpace-eZ2Bg.ttf);
+  }
+}
