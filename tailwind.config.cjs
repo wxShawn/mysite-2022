@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'home-banner': 'url(./src/assets/bg-banner4.jpg)'
+        'home-banner': 'url(/bg-banner.jpg)'
       },
       flex: {
         '2': '2 2 0%',
