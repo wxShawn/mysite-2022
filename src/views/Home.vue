@@ -89,10 +89,7 @@ const getLatestPosts = async (num = 6) => {
         });
       }
     }
-    setTimeout(() => { // 延时测试
-      postLoading.value = false;
-    }, 500);
-    // postLoading.value = false;
+    postLoading.value = false;
     return list;
   }
 }
@@ -129,9 +126,7 @@ const getLatestProjects = async (num = 6) => {
         });
       }
     }
-    setTimeout(() => { // 延时测试
-      projectLoading.value = false;
-    }, 500);
+    projectLoading.value = false;
     return list;
   }
 }

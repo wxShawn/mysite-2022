@@ -79,9 +79,7 @@ const getData = async () => {
         cover: rows[i].cover,
       });
     }
-    setTimeout(() => {
-      projectState.value = rows.length === 0 ? 'none' : 'success';
-    }, 500);
+    projectState.value = rows.length === 0 ? 'none' : 'success';
   }
 }
 

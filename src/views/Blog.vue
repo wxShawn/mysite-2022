@@ -121,9 +121,7 @@ const getPosts = async (page, pageSize) => {
         content,
       });
     }
-    setTimeout(() => {
-      postsState.value = posts.length === 0 ? 'none' : 'success';
-    }, 500);
+    postsState.value = posts.length === 0 ? 'none' : 'success';
   }
 }
 
