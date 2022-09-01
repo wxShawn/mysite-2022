@@ -14,18 +14,9 @@
 import { onBeforeMount, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import 'github-markdown-css';
-import hljs from 'highlight.js';
 import 'highlight.js/styles/atom-one-dark.css';
-import { marked } from 'marked';
 import api from '../request/api';
-
-marked.setOptions({
-  renderer: new marked.Renderer(),
-  highlight: function(code, lang) {
-    const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-    return hljs.highlight(code, { language }).value;
-  },
-});
+import marked from '../utils/marked';
 
 const route = useRoute();
 const { id } = route.params;
