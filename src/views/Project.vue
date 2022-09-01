@@ -33,7 +33,8 @@
         :cover="project.cover"
         :title="project.name"
         :date="project.date"
-        :content="project.content"  
+        :content="project.content" 
+        @click="handleProjectClick(project.url)" 
       />
     </div>
 
@@ -86,6 +87,10 @@ const getData = async () => {
 onBeforeMount(() => {
   getData();
 });
+
+const handleProjectClick = (url) => {
+  window.open(url, '_blank');
+}
 
 // 项目列表状态（'loading', 'success', 'none'）
 const projectState = ref('loading');

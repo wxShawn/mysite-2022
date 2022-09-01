@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "github-markdown-css": "^5.1.0",
+    "highlight.js": "^11.6.0",
     "marked": "^4.0.19",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"

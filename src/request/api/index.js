@@ -1,6 +1,13 @@
 import request from "../request";
 
 export default {
+  getPost(id) {
+    return request({
+      method: 'get',
+      url: `/articles/${id}`,
+    });
+  },
+
   getPosts(page, pageSize, title, categoryId) {
     return request({
       method: 'get',

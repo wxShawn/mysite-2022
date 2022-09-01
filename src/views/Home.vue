@@ -50,6 +50,7 @@
           :title="project.name"
           :date="project.date"
           :content="project.content"
+          @click="handleProjectClick(project.url)"
         />
       </div>
     </div>
@@ -64,6 +65,7 @@ import { marked } from 'marked';
 import Card from '../components/Card.vue';
 import api from '../request/api';
 import { html2Text } from '../utils/utils';
+import router from '../router';
 
 // 最近文章
 const posts = reactive([]);
@@ -100,7 +102,7 @@ onBeforeMount(async () => {
 });
 
 const handlePostClick = (id) => {
-  console.log('click post ', id);
+  router.push({ name: 'post', params: { id } });
 }
 
 /**
@@ -136,5 +138,8 @@ onBeforeMount(async () => {
   projects.push.apply(projects, list);
 });
 
+const handleProjectClick = (url) => {
+  window.open(url, '_blank');
+}
 
 </script>

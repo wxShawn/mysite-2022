@@ -40,7 +40,8 @@
       v-for="post in posts"
       :title="post.title"
       :date="post.date"
-      :content="post.content"  
+      :content="post.content"
+      @click="handlePostClick(post.id)"
     />
     <!-- 无结果 -->
     <div
@@ -52,6 +53,7 @@
 
 <script setup>
 import { onBeforeMount, reactive, ref } from 'vue';
+import router from '../router';
 import { marked } from 'marked';
 import { SearchOutlined } from '@vicons/antd';
 import { Icon } from '@vicons/utils';
@@ -131,5 +133,10 @@ onBeforeMount(() => {
 
 // 文章列表状态（'loading', 'success', 'none'）
 const postsState = ref('loading');
+
+// 文章点击
+const handlePostClick = (id) => {
+  router.push({ name: 'post', params: { id } });
+}
 
 </script>
